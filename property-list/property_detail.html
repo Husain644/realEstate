@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Makaan - Real Estate HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Jqury UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="../index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="../img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">Makaan</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="../index.html" class="nav-item nav-link">Home</a>
+                        <a href="../about.html" class="nav-item nav-link">About</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="property-list.html" class="dropdown-item">Property List</a>
+                                <a href="property-type.html" class="dropdown-item">Property Type</a>
+                                <a href="property-agent.html" class="dropdown-item">Property Agent</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="../testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="../404.html" class="dropdown-item">404 Error</a>
+                            </div>
+                        </div>
+                        <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+  
+
+
+             <!-- Search Start -->
+             <div class="container-fluid bg-primary mt-1 wow fadeIn" data-wow-delay="0.1s" style="padding: 5px;">
+                <div class="container">
+                    <div class="row g-2">
+                        <div class="col-md-10">
+                            <div class="row g-2">
+                                <div class="col-md-4">
+                                  
+                                 <input type="text" id="search-keywords" class="form-control border-0" 
+                                  placeholder="Search like: shop">
+                                </div>
+                                <div class="col-md-4">
+                            
+                                    <select class="form-select border-0" id="property-type">
+                                        <option selected>Property Type</option>
+                                        <option value="1">Residential</option>
+                                        <option value="2">Commercial</option>
+                                        <option value="3">Industrial</option>
+                                        <option value="4">AgriCulture</option>
+                                        <option value="5">Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                  
+                                    <input type="text"   class="form-control border-0" 
+                                    placeholder="Sector-4 Rewari" 
+                                    id="locations-input-selection">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-center h-100">
+                            <button id="btn1" class="btn btn-dark h-50 border-0 w-100 py-1">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search End -->
+       
+    
+    </div>
+
+
+
+
+        <!-- details Start ************************---******-->
+        <div class="container pt-2  add_top_15" style="transform: none;">
+                <div class="row" style="transform: none;">
+                <div class="col-lg-8">
+                    <div style="background: rgb(255, 255, 255); padding-bottom: 0px;" class="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 brgh" style="padding-left:0px">
+                                    <label class="main_head2">2 BHK Flat for Sale</label>
+                                    <span class="main_head3">in Antriksh Tower BMG City Sector 26, Rewari,
+                                        Haryana</span>
+                                </div>
+                                <div class="col-md-6 mbmain_head">
+                                    <label class="main_head2"><span
+                                            class="fa fa-inr"></span>&nbsp;38&nbsp;Lakh&nbsp;<span>@4.75k per
+                                            Sq.Ft.</span></label>
+                                    <span class="main_head3">ID - RP240214375</span>
+                                </div>
+                            </div>
+                            <div class="row bormb">
+                                <div class="col-md-12"
+                                    style="background-color:#fff;/* -webkit-box-shadow:0px 12px 10px -12px rgba(0,0,0,0.75);-moz-box-shadow:0px 12px 10px -12px rgba(0,0,0,0.75);box-shadow: 0px 12px 10px -12px rgba(0,0,0,0.75); */ ">
+                                    <nav class="secondary_nav bg-white rounded" id="secondary_nav3">
+                                        <div class="wid100" style="margin-left:-15px">
+                                            <ul
+                                                class="horizontal-scrollable border-bottom w-100 d-flex justify-content-between">
+                                                <li><a href="#overview" class="active">Specification</a></li>
+                                                <li><a href="#project_details_section" class="">Additional Details</a>
+                                                </li>
+                                                <li><a href="#project_highlight_section" class="">Transaction
+                                                        Details</a></li>
+                                                <li><a href="#sidebar">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- /row -->
+                        </div>
+                        <!-- /container -->
+                    </div>
+                    <!-- /results -->
+                    <style>
+                        .sfsfsf2 {
+                            height: 239px;
+                            width: 100%;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .bgs2 {
+                            background-size: cover;
+                            background-image: url('https://www.rewariproperties.com/public/uploads/property-image/flat-for-sale-in-rewari-1707898784033.jpg');
+                            filter: blur(1.2px) opacity(0.65);
+                            -webkit-filter: blur(1.2px) opacity(0.65);
+                            width: 100%;
+                            height: 239px;
+                        }
+
+                        @media (max-width: 575px) {
+                            .sfsfsf2 {
+                                height: 207px;
+                                width: 100%;
+                            }
+
+                            .bgs2 {
+                                height: 207px;
+                                width: 100%;
+                            }
+                        }
+                    </style>
+                    <div class="clearfix"></div><br>
+                    <section id="overview">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-7 position-relative" style="padding:0px;border:1px solid #c9c9c9">
+                                    <div class="bgs2"></div>
+                                    <div class="sfsfsf2" style="position:absolute; padding:0px;z-index:2;top:0">
+                                        <a href="javascript:void()" class="view_gallery_project"
+                                            data-id="RP240214375"><img class="w-100"
+                                             src="../img/property-2.jpg"
+                                                alt="2 BHK Flat for Sale in Antriksh Tower BMG City Sector 26, Rewari, Haryana">
+
+                                            <!--<span class="zoom_btn"><i class="fa fa-search-plus"></i></span>-->
+                                            <span class="zoom_btn_center "><i class="fa fa-photo"></i> View
+                                                Images</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="container cntnr_f_w">
+                                        <div class="row" style="border:1px solid #ddd;">
+                                            <div class="col-sm-12 col-12 bbtm">
+                                                <div class="row hgt_50">
+                                                    <div class="col-3">
+                                                        <img src="https://www.rewariproperties.com/public/img/Area.svg"
+                                                            class="dtl_img">
+                                                    </div>
+                                                    <div class="col-9 row"><small
+                                                            class="prj_details fnt_mob"><b>Area:</b>
+                                                            <br>800&nbsp;Sq.Ft.</small></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-12 bbtm nbrightmob">
+                                                <div class="row hgt_50">
+                                                    <div class="col-3">
+                                                        <img src="https://www.rewariproperties.com/public/img/project/pricing.svg"
+                                                            class="dtl_img">
+                                                    </div>
+                                                    <div class="col-9 row"><small class="prj_details fnt_mob"><b>Sale
+                                                                Price:</b>
+                                                            <br><i class="fa fa-inr"></i> 38&nbsp;Lakh</small></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-12 bbtm">
+                                                <div class="row hgt_50">
+                                                    <div class="col-3">
+                                                        <img src="https://www.rewariproperties.com/public/img/project/status.svg"
+                                                            class="dtl_img">
+                                                    </div>
+                                                    <div class="col-9 row"><small
+                                                            class="prj_details fnt_mob"><b>Property Status:</b>
+                                                            <br>Ready to Move</small></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-12 nbrightmob bbtmmob">
+                                                <div class="row hgt_50">
+                                                    <div class="col-3"><img
+                                                            src="https://www.rewariproperties.com/public/img/Direction.svg"
+                                                            class="dtl_img"></div>
+                                                    <div class="col-9 row"><small
+                                                            class="prj_details fnt_mob"><b>Property
+                                                                Face:</b><br>North</small></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container" style="padding-left:0px">
+                            <div class="detail_title_1">
+                                <h1 class="font_60">Specification</h1>
+                            </div>
+                            <div class="row" style="margin-left:-22px;">
+                                <div class="col-md-4">
+                                    <div class="shadow-sm">
+                                        <h6 class="leadh">Super Builtup Area</h6>
+                                        <p class="lead">800 Sq.Ft.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="shadow-sm">
+                                        <h6 class="leadh">Total Floor</h6>
+                                        <p class="lead">23</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="shadow-sm">
+                                        <h6 class="leadh">Property on Floor</h6>
+                                        <p class="lead">
+                                            9th Floor </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <hr class="padd_hr">
+                    </section>
+                    <style>
+                        .padd_hr {
+                            margin-top: -5px
+                        }
+
+                        #project_details_section h6 {
+                            font-weight: bold;
+                            font-size: 12px
+                        }
+
+                        .shadow-sm {
+                            padding-left: 8px;
+                            padding-top: 5px
+                        }
+                    </style>
+                    <section id="project_details_section">
+                        <div class="detail_title_1">
+                            <h1 class="font_60">Additional Details</h1>
+                        </div>
+
+                        <div class="row" style="margin-left:-22px;">
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Water Supply</h6>
+                                    <p class="lead">Yes</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Water Supply By</h6>
+                                    <p class="lead">By Builder</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Power Supply</h6>
+                                    <p class="lead">Domestic Single Phase</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Gated Community</h6>
+                                    <p class="lead">Yes</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Colony Reg.<!--ularization--> Status</h6>
+                                    <p class="lead">Affordable Group Housing Society</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Age of Construction</h6>
+                                    <p class="lead">0-1 Years</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Total Rooms</h6>
+                                    <p class="lead">2</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Total Balconies</h6>
+                                    <p class="lead">1</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Washrooms</h6>
+                                    <p class="lead">1-Common, 1-Attach</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Toilet Type</h6>
+                                    <p class="lead">2-Western</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Furnishing/Appliances Details</h6>
+                                    <p class="lead">Raw</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Parking</h6>
+                                    <p class="lead">
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="leadh">Parking Per Unit: 1</h6>
+                                            <div class="table-responsive">
+                                                <table class="table table-hover table-bordered table-fit"
+                                                    style="font-size:12px">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Parking - 1</th>
+                                                            <th>Covered</th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="padd_hr">
+                    </section>
+                    <section id="project_highlight_section">
+                        <div class="detail_title_1">
+                            <h1 class="font_60">Transaction Details</h1>
+                        </div>
+                        <div class="row flex-wrap" >
+                            <div class="col-md-4">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Ownership</h6>
+                                    <p class="lead">Freehold</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Transaction Type</h6>
+                                    <p class="lead">Resale</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Sale Price</h6>
+                                    <p class="lead">
+                                        38&nbsp;Lakh </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Possession</h6>
+                                    <p class="lead">Yes</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Loanable Property</h6>
+                                    <p class="lead">Yes</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="shadow-sm">
+                                    <h6 class="leadh">Maintanace Applicable</h6>
+                                    <p class="lead">No</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="padd_hr">
+                    </section>
+                    <section id="project_amenties_section">
+                        <div class="detail_title_1">
+                            <h1 class="font_60">Amenties</h1>
+                        </div>
+                        <div class="amen-wrapper">
+                            <div class="amen">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/security3.svg"
+                                    class="amn_img" title="Security" alt="Security">
+                                <p>
+                                    Security</p>
+                            </div>
+                            <div class="amen">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/lift5.svg"
+                                    class="amn_img"  alt="Lift">
+                                <p>
+                                    Lift</p>
+                            </div>
+
+                            <div class="amen">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/two-wheeler-parking2.svg"
+                                    class="amn_img"  alt="Two Wheeler Parking">
+                                <p>
+                                    Two Wheeler Parking
+                                </p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/waste-disposal2.svg"
+                                    class="amn_img" title="Waste Disposal" alt="Waste Disposal">
+                                <p>
+                                    Waste Disposal</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/vaastu-compliant3.svg"
+                                    class="amn_img" title="Vaastu Compliant" alt="Vaastu Compliant">
+                                <p>
+                                    Vaastu Compliant</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/wi-fi2.svg"
+                                    class="amn_img" title="Wi-Fi" alt="Wi-Fi">
+                                <p>
+                                    Wi-Fi</p>
+                            </div>
+                             
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/fire-safety3.svg"
+                                    class="amn_img" title="Fire Safety" alt="Fire Safety">
+                                <p>
+                                    Fire Safety</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/visitor-parking3.svg"
+                                    class="amn_img" title="Visitor Parking" alt="Visitor Parking">
+                                <p>
+                                    Visitor Parking</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/water-storage3.svg"
+                                    class="amn_img" title="Water Storage" alt="Water Storage">
+                                <p>
+                                    Water Storage</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/maintenance-staff3.svg"
+                                    class="amn_img" title="Maintenance Staff" alt="Maintenance Staff">
+                                <p>
+                                    Maintenance Staff</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/service-lift3.svg"
+                                    class="amn_img" title="Service Lift" alt="Service Lift">
+                                <p>
+                                    Service Lift</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/power-backup2.svg"
+                                    class="amn_img" title="Power Backup" alt="Power Backup">
+                                <p>
+                                    Power Backup</p>
+                            </div>
+                            <div class="amen text-center">
+                                <img src="https://www.rewariproperties.com/public/uploads/amenties/childrens-play2.svg"
+                                    class="amn_img" title="Children's Play" alt="Children's Play">
+                                <p>
+                                    Children's Play</p>
+                            </div>
+                        </div>
+                            <!-- /tab_building -->
+               
+                        <hr class="padd_hr">
+                    </section>
+                    <section id="project_reviews_section">
+                        <h1 class="font_60">Reviews</h1>
+                        <div class="reviews-container add_bottom_30">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="review_summary">
+                                        <strong>0</strong>
+                                        <em>&nbsp;</em>
+                                        Be the first to review this Property.
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-lg-10 col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar"
+                                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                        <div class="col-lg-10 col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" 
+                                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                        <div class="col-lg-10 col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" 
+                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                        <div class="col-lg-10 col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" 
+                                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                    <div class="row">
+                                        <div class="col-lg-10 col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                            </div>
+                            <!-- /row -->
+                        </div>
+                        <div class="reviews-container">
+
+                        </div>
+                        <!-- /review-container -->
+                        <hr>
+                    </section>
+                    <div class="add-review" id="add-review">
+                        <div class="d-flex justify-content-center col-md-12">
+                            <div class="box_contacts">
+                                <i class="fa fa-lock" style="font-size: 35px;color: brown;"></i>
+                                <h2>Login Required !</h2>
+                                Please <a href="#sign-in-dialog" onclick="genrate_cap('login');"
+                                    class="btn-link registerpopup login_registeration"
+                                    style="text-decoration:underline; color:#404a5a; font-weight:bold">login</a> to
+                                review this property.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 style="font-size:20px; margin-top:8px">2 BHK Flat for Sale in Antriksh Tower BMG City
+                                Sector 26 Rewari Haryana</h1>
+                        </div>
+                    </div>
+                </div>
+                    <aside class="col-lg-4" id="sidebar"
+                        style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+
+
+                        <div class="theiaStickySidebar"
+                            style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; left: 879.5px; top: 0px;">
+                            <div class="box_detail booking">
+                                <div class="price">
+                                    <h5 class="text-center">Contact Now</h5>
+                                    <div class="text-center" style="background-color:#efefef; padding:8px">
+                                        <h6 style="text-transform:capitalize">Anil Yadav</h6>Agent / +91 8708XXXXXX
+                                    </div>
+                                </div>
+
+                                <div id="after_otp">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" autocomplete="none" name="inquirer_name"
+                                            id="inquirer_name" value="" style="text-transform: capitalize;" required=""
+                                            placeholder="Name [Required]">
+                                        <i class="fa fa-user"></i>
+                                        <small class="help-block with-errors" id="name_error"
+                                            style="font-size:10px"></small>
+                                        <input type="hidden" required="" name="url" id="url"
+                                            value="https://www.rewariproperties.com/view-property/2-bhk-flat-for-sale-in-antriksh-tower-bmg-city-sector-26-rewari-Haryana-RP240214375">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" autocomplete="none" name="inquirer_mobile"
+                                            value="" id="inquirer_mobile" required="" maxlength="10"
+                                            onkeypress="return isNumberKey(event,this,12); "
+                                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                            placeholder="Mobile [Required]">
+                                        <i class="fa fa-phone"></i>
+                                        <small class="help-block with-errors" id="mobile_error"
+                                            style="font-size:10px"></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" autocomplete="none" name="inquirer_email"
+                                            id="inquirer_email" onkeyup="ValidateEmail2();" style="text-transform:lowercase"
+                                            onkeypress="ValidateEmail2();" required="" onkeydown="ValidateEmail2();"
+                                            onchange="ValidateEmail2();" value="" placeholder="Email [Required]">
+                                        <i class="fa fa-envelope"></i>
+                                        <small class="help-block with-errors" id="lblError2" style="font-size:10px"></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" autocomplete="none" name="inquirer_message"
+                                            id="inquirer_message" placeholder="Comments" style="height:50px"></textarea>
+                                        <i class="fa fa-pencil"></i>
+                                    </div>
+                                    <div class="form-group col-md-12" id="otp_status" style="padding:0px">
+                                        <input type="button" onclick="get_enquiry()" name="submit_enquiry"
+                                            class="btn_1 full-width purchase" value="Get OTP">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="share-post">
+                                <span class="sh">Share this property on:</span>
+                                <div id="share" class="jssocials">
+                                    <div class="jssocials-shares">
+                                        <div class="jssocials-share jssocials-share-twitter"><a href="#"
+                                                class="jssocials-share-link jssocials-share-link-count jssocials-share-no-count"><i
+                                                    class="fa fa-twitter jssocials-share-logo"></i><span
+                                                    class="jssocials-share-count"></span></a></div>
+                                        <div class="jssocials-share jssocials-share-facebook"><a href="#"
+                                                class="jssocials-share-link jssocials-share-link-count jssocials-share-no-count"><i
+                                                    class="fa fa-facebook jssocials-share-logo"></i><span
+                                                    class="jssocials-share-count"></span></a></div>
+                                        <div class="jssocials-share jssocials-share-whatsapp"><a target="_self"
+                                                href="whatsapp://send?text=https%3A%2F%2Fwww.rewariproperties.com%2Fview-property%2F2-bhk-flat-for-sale-in-antriksh-tower-bmg-city-sector-26-rewari-Haryana-RP240214375 2%20BHK%20Flat%20for%20Sale%20in%20Antriksh%20Tower%20BMG%20City%20Sector%2026%2C%20Rewari%2C%20Haryana"
+                                                class="jssocials-share-link jssocials-share-link-count jssocials-share-no-count"><i
+                                                    class="fa fa-whatsapp jssocials-share-logo"></i><span
+                                                    class="jssocials-share-count"></span></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resize-sensor"
+                                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                <div class="resize-sensor-expand"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 440px; height: 517px;">
+                                    </div>
+                                </div>
+                                <div class="resize-sensor-shrink"
+                                    style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div
+                                        style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+               <!-- Details  -->
+                <!-- /col -->
+              
+        </div>
+          
+        <!-- Details End ************************---*****************-->
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="../img/property-1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="../img/property-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="../img/property-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="../img/property-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="../img/property-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="../img/property-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Join Our Whats'app Group<i
+                                style="font-size: 40px; margin-left:20px; color:green" class="fab fa-whatsapp"></i>
+                        </h5>
+                        <p>Join Our Whatsapp group for getting information about letest property .</p>
+                        <div class="position-relative mx-auto" style="max-width: 500px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-2 text-white pe-5" type="text"
+                                placeholder="Whats'App Number">
+                            <button type="button"
+                                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#navbarCollapse" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+                class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/utiljs/index.js"></script>
+</body>
+
+</html>
